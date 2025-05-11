@@ -1,0 +1,35 @@
+name: Python CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  falsk-test:
+    name: Run Flask tests
+    runs-on: ubuntu-latest
+
+    steps:
+      -name: Checkout repository
+      uses: actions/checkout@v3
+
+      -name: Steup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+      -name: Install dependencies
+      run: |
+        cd backend
+        python -m venv venv
+        . venv/bin/activate
+        pip install --upgrade pip
+        pip install -r requirements.txt
+
+      -name: Run pytest
+      run: |
+        cd backend
+        . venv/bin/activate
+        pytest --maxfail=1 --disable-warnings -q
