@@ -12,24 +12,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      -name: Steup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.10"
+      - name: Steup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13.3"
 
-      -name: Install dependencies
-      run: |
-        cd backend
-        python -m venv venv
-        . venv/bin/activate
-        pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          cd backend
+          python -m venv venv
+          . venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
 
-      -name: Run pytest
-      run: |
-        cd backend
-        . venv/bin/activate
-        pytest --maxfail=1 --disable-warnings -q
+      - name: Run pytest
+        run: |
+          cd backend
+          . venv/bin/activate
+          pytest --maxfail=1 --disable-warnings -q
