@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホーム | My App</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="module" src="js/common.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="register.html" id="register-link">新規登録</a></li>
+            <li><a href="login.html" id="login-link">ログイン</a></li>
+            <li><a href="#" id="logout-link" style="display:none;">ログアウト</a></li>
+        </ul>
+    </nav>
+    <div id="message" class="message" style="display:none;"></div>
+
+    <main class="container">
+        <div id="user-info" class="user-info" style="display:none;">
+            ようこそ、<span id="username"></span>さん
+        </div>
+        <div class="welcome">
+            <h1>Rustウェブサーバーへようこそ</h1>
+            <p>このプロジェクトはRustを使用した簡易的なウェブサーバーの学習用だ</p>
+        </div>
+        <div>
+            <h2>APIテスト</h2>
+            <button id="api-test">API呼び出しテスト</button>
+            <div id="api-result" style="margin-top:10px;"></div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Rust
+/target
+
+# Python
+__pycache__/
+/*.py[cod]
+*.pyo
+*.pyd
+
+# 仮想環境
+backend/venv/
+
+# pytestのキャッシュ
+/backend/.pytest_cache/
+
+# SQLiteなどローカルDB
+backend/instance/*.db
+
+# VSCodeなどエディタ設定
+.vscode/
+
+# OS・ルール共通
+.DS_Store
+Thumbs.db
+CACHEDIR.TAG
+
+# 配布用圧縮アセット
+*.zip

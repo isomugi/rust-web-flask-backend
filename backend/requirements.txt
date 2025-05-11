@@ -1,0 +1,15 @@
+Flask==2.3.3
+Flask-SQLAlchemy==3.0.5
+Flask-Cors==4.0.0
+python-dotenv==1.0.0
+Werkzeug==2.3.7
+
+# マイグレーション管理
+Flask-Migrate>=4.0.0
+
+# JWT 認証
+Flask-JWT-Extended>=4.4.0
+
+# テストフレームワーク
+pytest>=7.0.0
+pytest-flask>=1.2.0

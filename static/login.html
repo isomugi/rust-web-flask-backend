@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン | My App</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script type="module" src="js/common.js" defer></script>
+    <script type="module" src="js/login.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="register.html">新規登録</a></li>
+            <li><a href="login.html" id="login-link">ログイン</a></li>
+            <li><a href="#" id="logout-link" style="display:none;">ログアウト</a></li>
+        </ul>
+    </nav>
+    <div id="message" class="message" style="display:none;"></div>
+
+    <main class="login-container">
+        <h1>ログイン</h1>
+        <div class="form-group">
+            <label for="username">ユーザー名</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">パスワード</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button id="login-button">ログイン</button>
+    </main>
+</body>
+</html>

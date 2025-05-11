@@ -1,0 +1,16 @@
+/* index.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .welcome {
+    text-align: center;
+    margin: 40px 0;
+  }
+  .user-info {
+    text-align: right;
+    margin-bottom: 20px;
+    display: none;
+  }
+  
