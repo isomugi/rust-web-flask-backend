@@ -31,9 +31,33 @@ jobs:
           . venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
+          pip install -r requirements-dev.txt
 
-      - name: Run pytest
+      - name: Check code format with Black
         run: |
           cd backend
           . venv/bin/activate
-          pytest --maxfail=1 --disable-warnings -q
+          black --check .
+      
+      - name: Check import order with isort
+        run: |
+          cd backend
+          . venv/bin/activate
+          isort . --check-only
+
+      - name: Lint with flake8
+        run: |
+          cd backend
+          . venv/bin/activate
+          flake8 .
+
+      - name: Run pytest with coverage
+        run: |
+          cd backend
+          . venv/bin/activate
+          coverage run -m pytest --maxfail=1 --disable-warnings -q
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
