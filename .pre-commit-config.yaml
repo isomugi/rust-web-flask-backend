@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+      - id: black
+        name: black (backend only)
+        entry: black backend
+        language: system
+        types: [python]
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        name: isort (backend only)
+        entry: isort
+        language: system
+        types: [python]
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8
+        name: flake8 (backend only)
+        entry: flake8 backend
+        language: system
+        types: [python]
