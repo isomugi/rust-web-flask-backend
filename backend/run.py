@@ -1,5 +1,6 @@
 import sys
 from pathlib import Path
+
 from app import create_app, db
 
 sys.path.append(str(Path(__file__).parent))
