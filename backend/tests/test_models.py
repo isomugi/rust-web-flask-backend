@@ -1,5 +1,6 @@
-import pytest
+# import pytest
 from app.models.user import User
+
 
 def test_set_and_check_password():
     user = User()

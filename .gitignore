@@ -26,3 +26,6 @@ CACHEDIR.TAG
 
 # 配布用圧縮アセット
 *.zip
+
+# coverage data
+.coverage

@@ -1,6 +1,9 @@
 from datetime import datetime, timezone
-from werkzeug.security import generate_password_hash, check_password_hash
+
+from werkzeug.security import check_password_hash, generate_password_hash
+
 from .. import db
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -16,7 +19,7 @@ class User(db.Model):
 
     def to_dict(self):
         return {
-            'id': self.id,
-            'username': self.username,
-            'created_at': self.created_at.isoformat()
-        } 
+            "id": self.id,
+            "username": self.username,
+            "created_at": self.created_at.isoformat(),
+        }

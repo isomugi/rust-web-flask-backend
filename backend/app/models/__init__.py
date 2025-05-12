@@ -1,2 +1,2 @@
-#Models packages initialization
-from .user import User
+# Models packages initialization
+# from .user import User
